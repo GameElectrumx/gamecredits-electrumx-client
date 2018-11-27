@@ -33,7 +33,7 @@ npm i gamecredits-electrumx-host-parse
 ```
 const ElectrumCli = require('gamecredits-electrumx-client')
 const main = async () => {
-    const ecl = new ElectrumCli(50001, 'electrum.gamecredits.network', 'tls') // tcp or tls
+    const ecl = new ElectrumCli(50002, 'electrum.gamecredits.network', 'tls') // tcp or tls
     await ecl.connect() // connect(promise)
     ecl.subscribe.on('blockchain.headers.subscribe', (v) => console.log(v)) // subscribe message(EventEmitter)
     try{
